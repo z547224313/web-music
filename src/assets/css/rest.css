@@ -1,0 +1,12 @@
+@import "~normalize.css";
+@import "~antd/dist/antd.css";
+/*设置一些全局样式*/
+
+h1,h2,h3,h4,h5,h6{
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
