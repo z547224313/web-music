@@ -30,11 +30,12 @@ const ContentLeft = styled.div`
   .logo {
     background-position: 0 0;
     background-image: url(${sprite01});
-
+    
     a {
       display: block;
       width: 176px;
       height: 69px;
+      text-indent: -9999px;
     }
   }
 
@@ -77,7 +78,7 @@ const ContentLeft = styled.div`
   }
 `
 const ContentRight = styled.div`
-        display: flex;
+  display: flex;
   align-content: center;
   color: #ccc;
   font-size: 12px;
@@ -89,6 +90,31 @@ const ContentRight = styled.div`
     input::placeholder{
       font-size: 12px;
       color: #9b9b9b;
+    }
+  }
+  .btn{
+    color: #ccc;
+    font-size: 12px;
+    background-color: #242424;
+    margin:19px 0 0 12px;
+    height: 32px;
+    text-align: center;
+    border: 1px solid #4F4F4F;
+    &:hover{
+      border: 1px solid #fff;
+    }
+  }
+  .login{
+    margin: 19px 0 0 20px;
+    overflow: hidden;
+    a{
+      color: #787878;
+      display: block;
+      overflow: hidden;
+      padding-top: 7px;
+      &:hover{
+        color: #787878;
+      }
     }
   }
 `

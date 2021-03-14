@@ -1,6 +1,6 @@
 const headerLinks = [
   {
-    path:'/',
+    path:'/home',
     name:'发现音乐',
   },
   {
@@ -25,4 +25,34 @@ const headerLinks = [
   }
 ]
 
-export default headerLinks
+const homeLinks = [
+  {
+    path:'/home/recommend',
+    name:'推荐'
+  },
+  {
+    path:'/home/topList',
+    name:'排行榜'
+  },
+  {
+    path:'/home/playlist',
+    name:'歌单'
+  },
+  {
+    path:'/home/djRadio',
+    name:'主播电台'
+  },
+  {
+    path:'/home/artist',
+    name:'歌手'
+  },
+  {
+    path:'/home/album',
+    name:'新碟上架'
+  },
+]
+
+export {
+  headerLinks,
+    homeLinks
+}
