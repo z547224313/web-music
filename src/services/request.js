@@ -11,10 +11,11 @@ instance.interceptors.response.use((res)=>{
   return res.data
 })
 
-function getRes(url){
+function getRes(url,params = {}){
   return new Promise((resolve,reject)=>{
     instance({
-      url
+      url,
+      params
     }).then(res=>{
       resolve(res)
     }).catch(err=>{
@@ -23,4 +24,4 @@ function getRes(url){
   })
 }
 //获取
-export const getBanner = ()=> getRes('/banner')
+export default getRes

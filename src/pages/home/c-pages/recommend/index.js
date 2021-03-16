@@ -1,16 +1,29 @@
 import React,{ memo,useEffect } from 'react';
-import * as api from '@/services/request'
-export default memo(function Recommend(props) {
+import { connect } from 'react-redux'
+import {getTopBannerAction} from "@/pages/home/c-pages/recommend/store/actionCreators";
+
+function Recommend(props) {
+  const { getBanners,topBanners } = props
+
   useEffect(()=>{
-    api.getBanner().then(res=>{
-      console.log(res)
-    }).catch(err=>{
-      console.log(err,'我是子组件')
-    })
-  },[])
+    getBanners()
+  },[getBanners])
+
  return (
   <div>
-    推荐
+    推荐{topBanners.length}
   </div>
- );})
+ );}
 
+ const mapStateToProps = state => ({
+   topBanners: state.recommend.topBanners
+ })
+
+const mapDispatchToProps = dispatch => ({
+  getBanners: ()=>{
+    //这里的函数保证action调用，然后使用reducer修改state
+    dispatch(getTopBannerAction())
+  }
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(memo(Recommend))
