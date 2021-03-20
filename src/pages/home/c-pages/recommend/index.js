@@ -1,22 +1,13 @@
-import React,{ memo,useEffect } from 'react';
-import { useDispatch, useSelector} from 'react-redux'
-import {getTopBannerAction} from "@/pages/home/c-pages/recommend/store/actionCreators";
-import {RecommendWrapper} from "@/pages/home/c-pages/recommend/style";
+import React,{ memo } from 'react';
+import TopBanner from './c-cpn/top-banner'
 
 function Recommend(props) {
-
-
-
-  const dispatch = useDispatch()
-  useEffect(()=>{
-    dispatch(getTopBannerAction())
-  },[dispatch])
-
  return (
-  <RecommendWrapper>
-    <div>推荐:{topBanners.length}</div>
-  </RecommendWrapper>
+  <>
+    <TopBanner/>
+  </>
  );}
 
-
 export default memo(Recommend);
+
+
