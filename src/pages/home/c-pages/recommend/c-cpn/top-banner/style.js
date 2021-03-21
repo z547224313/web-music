@@ -40,25 +40,14 @@ const BannerWrapper = styled.div`
   }
   .banner-left{
     width: 730px;
-    button{
-      width: 7px !important;
-      height: 7px !important;
-      border-radius: 50% !important;
-    }
-    .slick-active{
-      width: 16px !important;
-      button{
-        background-color: red !important;
-      }
-    }
     button:hover {
       background-color: red;
     }
     .banner-item{
-      height: 285px;
+      
       img{
-        width: 100%;
-        height: 100%;
+        height: 285px;
+        width: 730px
       }
     }
   }
