@@ -14,7 +14,7 @@ function ThemeHeaderRmc(props) {
           {
             links.map(item => {
               return (
-                <div className='links-item'>
+                <div key={item} className='links-item'>
                   <a href='todo'> </a>
                   <span>{item}</span>
                 </div>

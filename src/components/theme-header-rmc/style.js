@@ -2,7 +2,6 @@ import styled from 'styled-components'
 import bg from '@/assets/img/sprite_02.png'
 const ThemeHeaderWrapper = styled.div`
   box-sizing: border-box;
-  width: 645px;
   height: 33px;
   padding: 0 10px 0 34px;
   border-bottom: 2px solid red;
