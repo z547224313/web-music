@@ -9,7 +9,9 @@ const HeaderWrapper = styled.div`
     background-color: #242424;
 
     .mainContent {
+      background-color: #242424;
       width: 1100px;
+      min-width: 1100px;
       height: 70px;
       margin: 0 auto;
       display: flex;
@@ -19,6 +21,7 @@ const HeaderWrapper = styled.div`
 
   .bottomNavBar {
     height: 5px;
+    min-width: 1100px;
     background-color: #C20C0C;
   }
 

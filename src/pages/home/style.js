@@ -5,6 +5,7 @@ const HomeWrapper = styled.div`
     height: 30px;
     background-color: #C20C0C;
     &-content{
+      background-color: #C20C0C;
       height: 30px;
       width: 1100px;
       margin:0 auto;

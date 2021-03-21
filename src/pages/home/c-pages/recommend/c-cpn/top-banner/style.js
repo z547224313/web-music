@@ -3,6 +3,7 @@ import download from '@/assets/img/download.png'
 import banner from '@/assets/img/banner_sprite.png'
 const BannerWrapper = styled.div`
   height: 285px;
+  min-width: 1100px;
   background-image: url(${props => props.bgImage});
   background-size: 6000px;
   background-position: center center;
