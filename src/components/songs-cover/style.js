@@ -4,7 +4,7 @@ import icon from '@/assets/img/sprite_icon.png'
 const SongsWrapper = styled.div`
   box-sizing: content-box;
   width: 140px;
-
+  padding-bottom: 50px;
   .songs-top{
     position: relative;
     .mask{
@@ -29,15 +29,38 @@ const SongsWrapper = styled.div`
       background-color: rgba(0,0,0,.3);
       z-index: 9999;
       display: flex;
+      line-height: 27px;
+      justify-content: space-between;
+      align-items: center;
       &-left{
+        display: flex;
+        align-items: center;
         .listen{
           width: 14px;
           height: 11px;
           background-image: url(${icon});
           background-position: 0 -24px;
-          margin: 9px 5px 9px 10px;
+          margin: 0 5px 0 10px;
+
         }
       }
+      &-right{
+        .playBtn{
+          cursor: pointer;
+          margin-right: 10px;
+          width: 16px;
+          height: 17px;
+          background-image: url(${icon});
+          background-position: 0 0;
+        }
+      }
+    }
+  }
+  .songs-bottom{
+    .songs-title{
+      color: #000;
+      font-size: 14px;
+      margin: 8px 0 3px;
     }
   }
 `
