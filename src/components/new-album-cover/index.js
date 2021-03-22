@@ -7,9 +7,15 @@ function NewAlbumCover(props) {
     <NewAlbumCoverWrapper width={width} height={height}>
       <div className="cover-top">
         <img src={getImageSizeUrl(album.picUrl,100,100)} alt=""/>
+        <a href="/todo" className='cover-bg'> </a>
       </div>
       <div className="cover-bottom">
-
+        <div className="album-name text-nowrap">
+          <span>{album.name}</span>
+        </div>
+        <div className='artist'>
+          <span>{album.artist.name}</span>
+        </div>
       </div>
     </NewAlbumCoverWrapper>
   );
