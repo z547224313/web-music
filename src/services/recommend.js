@@ -9,3 +9,7 @@ export const getHotRecommend = limit => request('/personalized',{
 export const getNewAlbum = limit => request('/top/album',{
   limit
 })//获取新碟上架
+
+export const getTopList = idx => request('/top/list',{
+  idx
+})//获取榜单数据

@@ -1,6 +1,6 @@
 import * as actionTypes from './constans'
 
-import {getTopBanner, getHotRecommend,getNewAlbum} from "@/services/recommend";
+import {getTopBanner, getHotRecommend,getNewAlbum,getTopList} from "@/services/recommend";
 
 
 const changeTopBannerAction = res => ({
@@ -15,6 +15,18 @@ const changeTopBannerAction = res => ({
 const changeNewAlbum = res => ({
   type:actionTypes.CHANGE_NEW_ALBUM,
   newAlbum:res
+})
+const changeNewTopList = res => ({
+  type:actionTypes.CHANGE_NEW_TOP_LIST,
+  newTopList:res
+})
+const changeOriginTopList = res => ({
+  type:actionTypes.CHANGE_ORIGIN_TOP_LIST,
+  originTopList:res
+})
+const changeUpTopList = res => ({
+  type:actionTypes.CHANGE_UP_TOP_LIST,
+  upTopList:res
 })
 
 export const getTopBannerAction = () => {
@@ -38,6 +50,20 @@ export const getNewAlbumAction = (limit) => {
   return dispatch => {
     getNewAlbum(limit).then(res =>{
       dispatch(changeNewAlbum(res.albums))
+    })
+  }
+}
+
+export const getTopListAction = idx => {
+  return dispatch => {
+    getTopList(idx).then(res=>{
+      if(idx === 0){
+        dispatch(changeNewTopList(res.playlist))
+      }else if(idx === 2){
+        dispatch(changeOriginTopList(res.playlist))
+      }else if(idx === 3){
+        dispatch(changeUpTopList(res.playlist))
+      }
     })
   }
 }
