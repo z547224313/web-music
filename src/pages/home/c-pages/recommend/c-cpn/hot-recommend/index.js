@@ -7,7 +7,7 @@ import SongsCover from "@/components/songs-cover";
 function HotRecommend(props) {
   const {hotRecommendLists} = useSelector(state=>({
     hotRecommendLists:state.getIn(['recommend','hotRecommendLists'])
-  }),shallowEqual())
+  }),shallowEqual)
 
   const dispatch = useDispatch()
   useEffect(()=>{
